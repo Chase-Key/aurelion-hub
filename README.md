@@ -306,10 +306,76 @@ We welcome contributions to any module! See:
 
 ## 📰 Latest Updates
 
+**February 21, 2026:**
+- 🔌 Agent Skills integration added — all 4 core modules now include `SKILL.md` + `skill-manifest.json`
+- 🧠 AURELION Memory MCP server released — connect your knowledge graph to Claude Desktop and VS Code
+- 📋 Missing floor templates added to KERNEL and MEMORY (SOP Library, Background Story, Decision Tree)
+- 📁 ADVISOR and AGENT onboarding docs added (QUICKSTART.md, ONBOARDING_GUIDE.md)
+- 🛡️ Agent Integrity Questioning Protocol published as standalone protocol file
+
 **February 17, 2026:**
 - 🚀 Phase 1 launch: All 5 Lite modules released
 - ✅ KERNEL and MEMORY promoted to Production v1.0.0
 - 📖 Integration guides published
+
+---
+
+## 🔌 Agent Skills Integration
+
+AURELION modules are available as **Agent Skills** — compatible with Claude Code, Codex CLI, ChatGPT, and VS Code Copilot Chat.
+
+### What Are Agent Skills?
+Agent Skills (Anthropic open spec) let AI assistants load a module's instructions directly. Each AURELION module includes:
+- `SKILL.md` — natural language instructions the AI reads as a standing operating procedure
+- `skill-manifest.json` — marketplace metadata (name, categories, compatibility)
+
+### Available Skills
+
+| Module | Skill Type | Install |
+|--------|-----------|---------|
+| [aurelion-kernel-lite](https://github.com/chase-key/aurelion-kernel-lite) | Instructions | Use SKILL.md directly |
+| [aurelion-advisor-lite](https://github.com/chase-key/aurelion-advisor-lite) | Instructions | Use SKILL.md directly |
+| [aurelion-agent-lite](https://github.com/chase-key/aurelion-agent-lite) | Instructions | Use SKILL.md directly |
+| [aurelion-memory-lite](https://github.com/chase-key/aurelion-memory-lite) | Tool + MCP Server | See MCP setup below |
+
+### AURELION Memory as an MCP Server
+
+The Memory module ships with a full MCP (Model Context Protocol) server that connects your local knowledge graph to any MCP-compatible AI client.
+
+**One-command install:**
+```bash
+pip install "aurelion-memory-lite[mcp]"
+```
+
+**Claude Desktop config (`claude_desktop_config.json`):**
+```json
+{
+  "mcpServers": {
+    "aurelion-memory": {
+      "command": "python",
+      "args": ["-m", "aurelion_memory_mcp"],
+      "env": { "AURELION_MEMORY_PATH": "/path/to/your/memory-store" }
+    }
+  }
+}
+```
+
+**VS Code Copilot Chat (`settings.json`):**
+```json
+{
+  "github.copilot.chat.mcp.servers": {
+    "aurelion-memory": {
+      "command": "python",
+      "args": ["-m", "aurelion_memory_mcp"],
+      "env": { "AURELION_MEMORY_PATH": "${workspaceFolder}" }
+    }
+  }
+}
+```
+
+Once connected, the AI can search, read, write, and query your knowledge graph with `memory_search`, `memory_read`, `memory_write`, `memory_floor`, and `memory_session` tools.
+
+Full setup guide: [aurelion-memory-lite/mcp/README.md](https://github.com/chase-key/aurelion-memory-lite/blob/main/mcp/README.md)
 
 ---
 
