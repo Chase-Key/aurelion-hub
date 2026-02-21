@@ -78,7 +78,7 @@ Use when you work with AI assistants and need better collaboration patterns.
 
 ---
 
-### 🔀 [NEXUS-Lite](https://github.com/chase-key/aurelion-nexus-lite)
+### � NEXUS-Lite *(Coming Soon)*
 **Story-agnostic simulation framework**
 
 Use when you're building simulations, games, or story worlds.
@@ -89,7 +89,7 @@ Use when you're building simulations, games, or story worlds.
 - Python-based framework
 - Extensible architecture
 
-**Status:** ✅ Beta v0.1.0 | MIT License
+**Status:** 🔜 In development | Planned Q3 2026
 
 ---
 
@@ -142,9 +142,11 @@ Use battle-tested prompts and collaboration protocols.
 ---
 
 ### "I'm building a game/simulation/story world"
-→ Start with **[NEXUS-Lite](https://github.com/chase-key/aurelion-nexus-lite)**
+→ **NEXUS-Lite** is coming Q3 2026 — [watch the repo](https://github.com/chase-key/aurelion-hub) for updates.
 
-Use the simulation framework for NPCs, locations, and events.
+In the meantime:
+- Use **MEMORY** to track world state over time
+- Use **KERNEL** to structure your world-building
 
 **Then consider:**
 - Add **MEMORY** to track world state over time
@@ -187,7 +189,7 @@ Chase (CK) didn't start with a complete system. He built what he needed, when he
 
 **Late-2025:** Developed AGENT when working with AI assistants became a core part of his workflow.
 
-**2026:** Created NEXUS for a D&D campaign (Stonecrest), which evolved into a reusable simulation framework.
+**2026:** Began developing NEXUS — a story-agnostic simulation framework originating from a D&D campaign (Stonecrest). *(In development — Q3 2026)*
 
 **The lesson:** Start where you are. Add what you need. Build your own AURELION system.
 
@@ -199,7 +201,8 @@ Chase (CK) didn't start with a complete system. He built what he needed, when he
 ✅ **Free to clone, use, modify, and distribute**  
 ✅ All features free to use  
 ✅ No paid services required  
-✅ Available now: KERNEL, MEMORY, ADVISOR, AGENT, NEXUS
+✅ Available now: KERNEL, MEMORY, ADVISOR, AGENT
+🔜 Coming Q3 2026: NEXUS
 
 ### Premium Features (MIT Licensed - Open Source)
 ✅ **Free to clone, use, modify, and distribute**  
@@ -395,7 +398,7 @@ Full setup guide: [aurelion-memory-lite/mcp/README.md](https://github.com/chase-
 - [MEMORY-Lite](https://github.com/chase-key/aurelion-memory-lite) - Knowledge graph
 - [ADVISOR-Lite](https://github.com/chase-key/aurelion-advisor-lite) - Planning templates
 - [AGENT-Lite](https://github.com/chase-key/aurelion-agent-lite) - AI collaboration
-- [NEXUS-Lite](https://github.com/chase-key/aurelion-nexus-lite) - Simulation framework
+- NEXUS-Lite *(Coming Q3 2026)* - Simulation framework
 
 ---
 
